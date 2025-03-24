@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.24.4",
     "mockjs": "^1.1.0",
     "next": "15.2.3",
     "react": "^19.0.0",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9.22.0",
     "eslint-config-next": "15.2.3",
+    "sass": "^1.86.0",
     "stylelint": "^16.16.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "tailwindcss": "^4",
