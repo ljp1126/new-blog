@@ -1,4 +1,6 @@
 import { ChangeEvent, useState } from 'react'
+import { message } from 'antd';
+import request from 'service/fetch'
 import CountDown from 'components/CountDown'
 import styles from './index.module.scss'
 interface IProps {
@@ -19,7 +21,21 @@ const Login = (props: IProps) => {
   };
 
   const handleGetVerifyCode = () => {
-    setIsShowVerifyCode(true)
+    if (!form?.phone) {
+      message.warning('请输入手机号')
+      return
+    }
+    request.post('/api/user/sendVerifyCode', {
+      to: form?.phone,
+      templateId: 1
+    }).then((res: any) => {
+      const { code, msg } = res
+      if (code === 0) {
+        setIsShowVerifyCode(true)
+      } else {
+        message.error(msg)
+      }
+    })
   };
 
   const handleLogin = () => {
