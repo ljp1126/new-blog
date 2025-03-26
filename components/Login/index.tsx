@@ -39,7 +39,18 @@ const Login = (props: IProps) => {
   };
 
   const handleLogin = () => {
+    request.post('/api/user/login', {
+      ...form,
+    }).then((res: any) => {
+      const { code, msg } = res
+      if (code === 0) {
+        // 登录成功
 
+        onClose && onCLose()
+      } else {
+        message.error(msg)
+      }
+    })
   };
 
   const handleOAuthGithub = () => {
