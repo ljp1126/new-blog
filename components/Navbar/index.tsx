@@ -39,7 +39,7 @@ const Navbar: NextPage = () => {
         <Button onClick={handleGoToEditorPage}>写文章</Button>
         <Button onClick={handleLogin} type="primary">登录</Button>
       </section>
-      <Login isShow={isShowLogin} ocClose={handleClose} />
+      <Login isShow={isShowLogin} onClose={handleClose} />
     </div>
   )
 }

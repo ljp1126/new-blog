@@ -17,7 +17,7 @@ const Login = (props: IProps) => {
   })
 
   const handleClose = () => {
-    onClose()
+    onClose && onClose()
   };
 
   const handleGetVerifyCode = () => {
