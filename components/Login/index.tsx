@@ -45,8 +45,8 @@ const Login = (props: IProps) => {
       const { code, msg } = res
       if (code === 0) {
         // 登录成功
-
-        onClose && onCLose()
+        message.success('登录成功')
+        handleClose()
       } else {
         message.error(msg)
       }
