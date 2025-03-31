@@ -59,10 +59,7 @@ const Login = (props: IProps) => {
 
   const handleFormChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e?.target
-    setForm({
-      ...form,
-      [name]: value
-    })
+    setForm({ ...form, [name]: value })
   }
 
   const handleCountDownEnd = () => {
