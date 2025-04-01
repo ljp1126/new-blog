@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import { ironoptions } from 'config/index';
-import { prepareConnection } from 'db/index'
-import { User, UserAuth } from 'db/entity/index'
+// import { prepareConnection } from 'db/index'
+// import { User, UserAuth } from 'db/entity/index'
 
 export default withIronSessionApiRoute(login, ironoptions)
 
