@@ -54,8 +54,32 @@ const Login = (props: IProps) => {
   };
 
   const handleOAuthGithub = () => {
+    // let a = 'cbaebabacd'
+    // let p = 'abc'
+    // test(a, p)
 
+    // let aa = 'abab'
+    // let pp = 'ab'
+    // test(aa, pp)
   };
+
+  const test = (s: any, p: any) => {
+    let list = []
+    const pList = p.split('')
+    const sList = s.split('')
+    for (var i = 0; i < sList.length - 2; i++) {
+      const item: any = []
+      for (var j = 0; j < pList.length; j++) {
+        item.push(sList[i + j])
+      }
+      let sItem = item.sort().join('')
+      let pItem = pList.sort().join('')
+      if (sItem === pItem) {
+          list.push(i)
+      }
+    }
+    return list
+  }
 
   const handleFormChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e?.target
